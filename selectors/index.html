@@ -3,64 +3,148 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="style.css" />
 		<title>Document</title>
+		<link rel="stylesheet" href="./style.css" />
 	</head>
 	<body>
-		<ul>
-			<li>hello</li>
-			<li>hello</li>
-			<li>hello</li>
-			<li>hello</li>
-			<li>hello</li>
-			<li>
-				<ul>
-					<li>This is a nested list item</li>
-					<li>Another nested li</li>
-				</ul>
-			</li>
-		</ul>
+		<!-- <h1>Expenses &copy; &uArr; &zigrarr;</h1>
+		<table>
+			<thead>
+				<tr>
+					<th>Amount</th>
+					<th>Currency</th>
+					<th>Total in $</th>
+				</tr>
+			</thead>
 
-		<ol>
-			<li>Hadrian's wall</li>
-			<li>Terraforming Mars</li>
-			<li>Risk</li>
-			<li>Catan</li>
-			<li>Civilization</li>
-		</ol>
+			<tbody>
+				<tr>
+					<td class="special">100</td>
+					<td>€</td>
+					<td>120</td>
+				</tr>
+				<tr>
+					<td class="super special">80</td>
+					<td>CAD$</td>
+					<td>60</td>
+				</tr>
+				<tr>
+					<td class="special">50</td>
+					<td>&#163;</td>
+					<td>60</td>
+				</tr>
+				<tr>
+					<td class="special">50</td>
+					<td>&#163;</td>
+					<td>60</td>
+				</tr>
+				<tr>
+					<td class="special">50</td>
+					<td>&#163;</td>
+					<td>60</td>
+				</tr>
+				<tr>
+					<td class="special">50</td>
+					<td>&#163;</td>
+					<td>60</td>
+				</tr>
+				<tr>
+					<td class="special">50</td>
+					<td>&#163;</td>
+					<td>60</td>
+				</tr>
+				<tr>
+					<td class="special">50</td>
+					<td>&#163;</td>
+					<td>60</td>
+				</tr>
+				<tr>
+					<td class="special">50</td>
+					<td>&#163;</td>
+					<td>60</td>
+				</tr>
+				<tr>
+					<td class="special">50</td>
+					<td>&#163;</td>
+					<td>60</td>
+				</tr>
+				<tr>
+					<td class="special">50</td>
+					<td>&#163;</td>
+					<td>60</td>
+				</tr>
+			</tbody>
+		</table> -->
 
-		<div class="card">
-			<h2 class="title">Here is a card element</h2>
-			<p>Lorem <span>i</span>psum dolor sit amet consectetur.</p>
+		<!-- <div class="super special">test</div> -->
+
+		<!-- .container>(article>h3+p)*3 -->
+		<!-- section.container>(article>h3{Article $}+p)*3 -->
+		<h1 id="sad-title">Sad Title</h1>
+		<section class="container">
+			<article>
+				<h3>Article 1</h3>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro,
+					provident.
+				</p>
+			</article>
+			<article>
+				<h3>Article 2</h3>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro,
+					provident.
+				</p>
+			</article>
+			<article>
+				<h3>Article 3</h3>
+
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro,
+					provident.
+				</p>
+			</article>
+			<article>
+				<h3>Article 4</h3>
+				<div class="image-wrapper">
+					<img
+						src="https://images.unsplash.com/photo-1701475391252-2d3f3f03db41?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+						alt="" />
+				</div>
+
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro,
+					provident.
+				</p>
+			</article>
+		</section>
+
+		<div class="flex-example">
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
 		</div>
 
-		<div class="text-container">
-			<h3>Title</h3>
-			<div><img src="" alt="" /></div>
-
-			<p>Lorem ipsum dolor sit amet.</p>
+		<div class="flex-column">
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
 		</div>
 
-		<ul>
-			<li><a href="https://www.google.com">google</a></li>
-			<li><a href="http://ironhack.com">ironhack</a></li>
-			<li><a href="http://space-jam.com/1996">Space jam</a></li>
-		</ul>
-
-		<article><h1 id="main-title">Title</h1></article>
-		<article><h2>Sub-title</h2></article>
-		<article>
-			<h2>Sub-title</h2>
-			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla iusto
-				cupiditate ipsam aliquam aperiam atque quae distinctio, quasi
-				blanditiis, eligendi nostrum nam voluptatibus ea dolores nobis. Voluptas
-				perspiciatis accusamus voluptatum!
-			</p>
-		</article>
-
-		<input type="text" placeholder="Type your name" />
-
-		<input type="password" />
+		<header>
+			<h1>Centered Title</h1>
+			<blockquote>Said someone wise.</blockquote>
+		</header>
 	</body>
 </html>

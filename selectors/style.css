@@ -1,90 +1,149 @@
-ul {
-	background-color: dodgerblue;
+* {
+	box-sizing: border-box;
 }
-
-ul li {
-	color: white;
+html {
 	font-family: sans-serif;
+	background-color: #1a1a1a;
+	color: whitesmoke;
 }
 
-ul li::marker {
-	content: "😀 ";
-}
-ul li:nth-child(5) {
-	text-transform: capitalize;
-}
-
-li > ul > li {
-	color: red;
-}
-
-li {
-	& ul {
-		& li {
-			color: blue;
-		}
-	}
-}
-
-.card {
-	background-color: antiquewhite;
-	padding: 32px;
-	border-radius: 16px;
-	/* .card p */
-	& p::first-letter {
-		text-transform: uppercase;
-		color: pink;
-	}
-	& span {
-		font-weight: 700;
-	}
-	.title {
-		font-size: 2rem;
-		text-transform: capitalize;
-	}
-}
-
-element sub-element {
-}
-
-element > direct-children {
-}
-
-ol > li:nth-child(1) + li {
-	color: blue;
-}
-
-/* h3 ~ p {
-} */
-
-ul:has(a) {
-	all: initial;
-}
-
-article:not(:has(#main-title)) p {
-	color: burlywood;
-}
-
-input {
-	background-color: gray;
-}
-input:focus {
+thead th {
 	background-color: red;
 }
 
-input[type="password"] {
-	color: green;
+td.special.super + * {
+	background-color: blue;
 }
 
-a[href*="oo"] {
-	font-size: 2rem;
+tbody tr:nth-child(odd) {
+	background-color: black;
 }
-a[href^="https"] {
-	color: lightblue;
+tbody tr:nth-child(even) {
+	background-color: rgb(52, 52, 52);
 }
 
-a[href$=".com"] {
-	background-color: lightgreen;
+tbody tr:nth-child(3n + 5) {
+	background-color: yellow;
+	color: black;
+}
+/* .super.special {
+	font-size: 80px;
+} */
+
+article {
+	height: 200px;
+	width: 200px;
+	background-color: whitesmoke;
+	color: black;
+	padding: 20px;
 	border-radius: 8px;
-	padding: 8px;
+	box-shadow: 2px 2px 16px limegreen, 6px 6px 8px blue;
+}
+
+.container :is(article:nth-child(2), article:nth-child(3)) {
+	background-color: gray;
+}
+/* .container article:nth-child(2),
+.container article:nth-child(3) {
+	background-color: gray;
+} */
+
+article .image-wrapper {
+	width: 75px;
+	height: 75px;
+	border-radius: 50%;
+	overflow: hidden;
+	transition: 200ms border-radius;
+}
+
+.image-wrapper img {
+	width: 100%;
+}
+
+article:has(img) {
+	height: fit-content;
+}
+article:has(img) img {
+	filter: brightness(80%) saturate(0.5) blur(2px);
+	transition: 500ms filter, 4s scale;
+}
+
+article:hover img {
+	filter: brightness(120%) saturate(1) blur(0);
+	scale: 1.2;
+}
+article:hover .image-wrapper {
+	border-radius: 8px;
+}
+
+article:has(img) h3 {
+	font-style: italic;
+}
+
+#sad-title {
+	transition: 1s;
+}
+#sad-title:hover {
+	transform: translateY(-10px);
+	transition: 200ms;
+}
+
+.container {
+	display: flex;
+	/* flex-direction: column-reverse; */
+	gap: 50px;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.flex-example {
+	height: 400px;
+	aspect-ratio: 1;
+	background-color: gray;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	align-content: center;
+	flex-wrap: wrap;
+	gap: 25px;
+	.box {
+		height: 50px;
+		width: 50px;
+		background-color: dodgerblue;
+		border: 1px solid black;
+		/* margin: 0 20px; */
+	}
+}
+
+.flex-column {
+	height: 600px;
+	width: 150px;
+	background-color: gray;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 5px;
+
+	.box {
+		height: 50px;
+		width: 50px;
+		border-radius: 50%;
+		background-color: green;
+		border: 1px solid black;
+	}
+}
+
+header {
+	background-color: lightcoral;
+	height: 500px;
+	color: black;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+blockquote {
+	font-style: italic;
 }
